@@ -5,7 +5,7 @@ SOLR_PID=$!
 
 while [[ $(curl -s -o /dev/null -w '%{http_code}' http://localhost:8983/solr/techproducts/admin/file/?file=admin-extra.html) != '200' ]]; do
   echo "waiting for "techproducts" at localhost:8983 to be available..."
-  sleep 1;
+  sleep 10;
 done
 
 echo "localhost:8983 is available"
